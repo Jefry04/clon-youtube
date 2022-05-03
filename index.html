@@ -5,16 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Youtube</title>
-    <!-- Normalize -->
     <link rel="stylesheet" href="./css/normalize.css" />
-    <!-- Roboto: 400, 500, 700-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <!-- Estilos Personalizados -->
     <link rel="stylesheet" href="./css/app.css" />
-    <!-- Scripts -->
     <script src="./js/app.js" defer></script>
   </head>
-  <body></body>
+<body>
+  <main class="videoPreview__container">
+    <div class="filter">
+    </div>
+    <div class="card__container" id="items">
+    </div>
+ </main>
+ <template id="template__card">
+  <div class="card">
+    <header class="card__video">
+      <img src="" alt="" width="100%" />
+    </header>
+    <div class="card__body">
+      <div class="card__avatar">
+        <img src="" alt="" id="card__avatar__img" >
+      </div>
+      <div class="card__text">
+        <h3></h3>
+        <div class="card__name">
+          <span id="name">MichelleVar</span>
+          <img src="" alt="" id="card__vector__img" >
+        </div>
+        <span id="visite">1 M de vistas &middot; en 15 horas</span>
+      </div>
+    </div>
+</div>
+</template>
+  <script src="./js/app.js"></script>
+</body>
 </html>
