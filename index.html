@@ -12,33 +12,352 @@
     <link rel="stylesheet" href="./css/app.css" />
     <script src="./js/app.js" defer></script>
   </head>
-<body>
-  <main class="videoPreview__container">
-    <div class="filter">
-    </div>
-    <div class="card__container" id="items">
-    </div>
- </main>
- <template id="template__card">
-  <div class="card">
-    <header class="card__video">
-      <img src="" alt="" width="100%" />
-    </header>
-    <div class="card__body">
-      <div class="card__avatar">
-        <img src="" alt="" id="card__avatar__img" >
-      </div>
-      <div class="card__text">
-        <h3></h3>
-        <div class="card__name">
-          <span id="name">MichelleVar</span>
-          <img src="" alt="" id="card__vector__img" >
+  <body>
+    <main class="videoPreview__container">
+      <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <!-- Explorer Area -->
+          <section class="sidebar__section">
+            <div class="sidebar__section__body">
+              <!-- Home -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 7V18H6V12H10V18H16V7L8 0L0 7Z" fill="black" />
+                  </svg>
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Principal</div>
+                </a>
+              </div>
+              <!-- Explorer -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.8 7.8L3.97 16.03L12.2 12.2L16.03 3.97L7.8 7.8ZM11.08 10.77C10.87 11.06 10.57 11.25 10.22 11.31C10.15 11.32 10.07 11.33 10 11.33C9.72 11.33 9.46 11.25 9.23 11.08C8.94 10.87 8.75 10.57 8.69 10.22C8.63 9.87 8.71 9.51 8.92 9.23C9.13 8.94 9.43 8.75 9.78 8.69C10.13 8.63 10.48 8.71 10.77 8.92C11.06 9.13 11.25 9.43 11.31 9.78C11.37 10.13 11.29 10.48 11.08 10.77ZM10 1C14.96 1 19 5.04 19 10C19 14.96 14.96 19 10 19C5.04 19 1 14.96 1 10C1 5.04 5.04 1 10 1ZM10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Explorar</div>
+                </a>
+              </div>
+              <!-- Shorts -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.00001 12.65V7.35001L12 10L7.00001 12.65ZM14.77 8.32001C14 8.00001 13.57 7.82001 13.57 7.82001L15 7.06001C16.84 6.10001 17.53 3.83001 16.56 2.00001C15.59 0.170006 13.32 -0.529994 11.49 0.440006L3.00001 4.94001C1.71001 5.62001 0.930014 6.98001 1.00001 8.43001C1.07001 9.85001 1.93001 11.1 3.22001 11.68C3.25001 11.69 4.42001 12.18 4.42001 12.18L3.00001 12.93C1.17001 13.9 0.470014 16.17 1.44001 18C2.41001 19.83 4.68001 20.53 6.51001 19.56L15.01 15.06C16.3 14.38 17.07 13.02 17 11.57C16.93 10.15 16.06 8.89001 14.77 8.32001ZM14.54 14.18L6.04001 18.68C4.70001 19.39 3.03001 18.88 2.32001 17.54C1.61001 16.2 2.12001 14.53 3.46001 13.82L5.50001 12.74V11.53L4.81001 11.25L3.70001 10.79C2.71001 10.38 2.05001 9.44001 2.00001 8.38001C1.95001 7.32001 2.52001 6.32001 3.46001 5.82001L11.96 1.32001C13.3 0.610006 14.97 1.12001 15.68 2.46001C16.39 3.80001 15.88 5.47001 14.54 6.18001L12.5 7.26001V8.47001L14.3 9.21001C15.29 9.62001 15.95 10.56 16 11.62C16.05 12.68 15.48 13.68 14.54 14.18Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Shorts</div>
+                </a>
+              </div>
+              <!-- Subscriptions -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8 15V9L13 12L8 15ZM15 0H5V1H15V0ZM18 3H2V4H18V3ZM20 6H0V18H20V6ZM1 7H19V17H1V7Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Subscripciones</div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Connection -->
+          <section class="sidebar__section">
+            <header class="sidebar__section__header">
+              <p class="sidebar__section__description">
+                Connectez-vous à YouTube pour cliquer sur "J'aime", ajouter un commentaire et vous abonner.
+              </p>
+            </header>
+            <div class="sidebar__section__body">
+              <a href="javaScript:;" class="connection-btn">
+                <!-- Icon -->
+                <svg
+                  width="20"
+                  height="20"
+                  class="connection-btn__icon"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 1C14.96 1 19 5.04 19 10C19 11.42 18.66 12.76 18.07 13.96C16.54 12.24 14.09 11.07 10.69 10.93C12.57 10.6 14 8.97 14 7C14 4.79 12.21 3 10 3C7.79 3 6 4.79 6 7C6 8.97 7.43 10.6 9.31 10.93C5.91 11.07 3.46 12.24 1.93 13.96C1.34 12.76 1 11.42 1 10C1 5.04 5.04 1 10 1ZM7 7C7 5.35 8.35 4 10 4C11.65 4 13 5.35 13 7C13 8.65 11.65 10 10 10C8.35 10 7 8.65 7 7ZM10 19C6.84 19 4.06 17.36 2.45 14.88C4.01 12.93 6.61 11.9 10 11.9C13.39 11.9 15.99 12.93 17.55 14.88C15.94 17.36 13.16 19 10 19Z"
+                    fill="black"
+                  />
+                </svg>
+
+                <div class="connection-btn__content">Ingresar</div>
+              </a>
+            </div>
+          </section>
+
+          <!-- Categories -->
+          <section class="sidebar__section">
+            <header class="sidebar__section__header">
+              <h2 class="sidebar__section__title">Lo mejor de YouTube</h2>
+            </header>
+            <div class="sidebar__section__body">
+              <!-- Music -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <figure class="sidebar__tab__icon sidebar__tab__icon--rounded-full">
+                    <img src="./images/icons/music.jpg" alt="music icon" class="sidebar__tab__img" />
+                  </figure>
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Musica</div>
+                </a>
+              </div>
+              <!-- Sports -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <figure class="sidebar__tab__icon sidebar__tab__icon--rounded-full">
+                    <img src="./images/icons/sports.jpg" alt="sports icon" class="sidebar__tab__img" />
+                  </figure>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Deportes</div>
+                </a>
+                <!-- Icon -->
+              </div>
+              <!-- Videogames -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <figure class="sidebar__tab__icon sidebar__tab__icon--rounded-full">
+                    <img src="./images/icons/games.jpg" alt="games icon" class="sidebar__tab__img" />
+                  </figure>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Videojuegos</div>
+                </a>
+              </div>
+              <!-- News -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <figure class="sidebar__tab__icon sidebar__tab__icon--rounded-full">
+                    <img src="./images/icons/news.jpg" alt="news icon" class="sidebar__tab__img" />
+                  </figure>
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Noticias</div>
+                </a>
+              </div>
+              <!-- Lives -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <figure class="sidebar__tab__icon sidebar__tab__icon--rounded-full">
+                    <img src="./images/icons/lives.jpg" alt="lives icon" class="sidebar__tab__img" />
+                  </figure>
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">En vivo</div>
+                </a>
+              </div>
+              <!-- Learn -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <figure class="sidebar__tab__icon sidebar__tab__icon--rounded-full">
+                    <img src="./images/icons/learn.jpg" alt="learn icon" class="sidebar__tab__img" />
+                  </figure>
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Aprendizaje</div>
+                </a>
+              </div>
+              <!-- 360 -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <figure class="sidebar__tab__icon sidebar__tab__icon--rounded-full">
+                    <img
+                      src="./images/icons/panoramic-videos.jpg"
+                      alt="panoramic videos icon"
+                      class="sidebar__tab__img"
+                    />
+                  </figure>
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Video panorámico en 360°</div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- More of YouTUbe -->
+          <section class="sidebar__section">
+            <header class="sidebar__section__header">
+              <h2 class="sidebar__section__title">Mas de youtube</h2>
+            </header>
+            <div class="sidebar__section__body">
+              <!-- Premium -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8 4.35L13 7L8 9.65V4.35ZM10 1C7.47424 0.950847 4.94811 1.07782 2.44 1.38C2.18722 1.4509 1.95693 1.58564 1.77129 1.77129C1.58565 1.95693 1.4509 2.18722 1.38 2.44C1.11211 3.94492 0.984896 5.4715 1 7C0.984896 8.5285 1.11211 10.0551 1.38 11.56C1.4509 11.8128 1.58565 12.0431 1.77129 12.2287C1.95693 12.4144 2.18722 12.5491 2.44 12.62C4.94811 12.9222 7.47424 13.0492 10 13C12.5258 13.0492 15.0519 12.9222 17.56 12.62C17.8128 12.5491 18.0431 12.4144 18.2287 12.2287C18.4144 12.0431 18.5491 11.8128 18.62 11.56C18.8879 10.0551 19.0151 8.5285 19 7C19.0151 5.4715 18.8879 3.94492 18.62 2.44C18.5491 2.18722 18.4144 1.95693 18.2287 1.77129C18.0431 1.58564 17.8128 1.4509 17.56 1.38C15.0519 1.07782 12.5258 0.950847 10 1ZM10 0C10 0 16.25 8.9407e-08 17.81 0.42C18.2341 0.534356 18.6208 0.758008 18.9314 1.06861C19.242 1.37921 19.4656 1.76589 19.58 2.19C19.8696 3.77673 20.0103 5.38708 20 7C20.0103 8.61292 19.8696 10.2233 19.58 11.81C19.4656 12.2341 19.242 12.6208 18.9314 12.9314C18.6208 13.242 18.2341 13.4656 17.81 13.58C16.25 14 10 14 10 14C10 14 3.75 14 2.19 13.58C1.76589 13.4656 1.37922 13.242 1.06861 12.9314C0.758012 12.6208 0.53436 12.2341 0.420004 11.81C0.130362 10.2233 -0.0102501 8.61292 3.98082e-06 7C-0.0102501 5.38708 0.130362 3.77673 0.420004 2.19C0.53436 1.76589 0.758012 1.37921 1.06861 1.06861C1.37922 0.758008 1.76589 0.534356 2.19 0.42C3.75 8.9407e-08 10 0 10 0Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Youtube Premium</div>
+                </a>
+              </div>
+              <!-- Lives -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 8C12 9.1 11.1 10 10 10C8.9 10 8 9.1 8 8C8 6.9 8.9 6 10 6C11.1 6 12 6.9 12 8ZM6.48 4.45L5.77 3.75C4.68 4.83 4 6.34 4 8C4 9.66 4.68 11.17 5.77 12.25L6.48 11.54C5.57 10.64 5 9.39 5 8C5 6.61 5.57 5.36 6.48 4.45ZM14.23 3.75L13.52 4.46C14.43 5.36 15 6.61 15 8C15 9.39 14.43 10.64 13.52 11.55L14.23 12.26C15.32 11.17 16 9.66 16 8C16 6.34 15.32 4.83 14.23 3.75ZM3.65 1.63L2.95 0.919998C1.13 2.73 0 5.24 0 8C0 10.76 1.13 13.27 2.95 15.08L3.66 14.37C2.02 12.74 1 10.49 1 8C1 5.51 2.02 3.26 3.65 1.63ZM17.05 0.919998L16.34 1.63C17.98 3.26 19 5.51 19 8C19 10.49 17.98 12.74 16.35 14.37L17.06 15.08C18.87 13.27 20 10.76 20 8C20 5.24 18.87 2.73 17.05 0.919998Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">En vivo</div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Settings -->
+          <section class="sidebar__section">
+            <div class="sidebar__section__body">
+              <!-- Settings -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 7C11.65 7 13 8.35 13 10C13 11.65 11.65 13 10 13C8.35 13 7 11.65 7 10C7 8.35 8.35 7 10 7ZM10 6C7.79 6 6 7.79 6 10C6 12.21 7.79 14 10 14C12.21 14 14 12.21 14 10C14 7.79 12.21 6 10 6ZM11.22 1L11.77 3.2L11.9 3.71L12.4 3.89C13.01 4.12 13.59 4.45 14.12 4.87L14.52 5.19L15.02 5.05L17.19 4.43L18.41 6.54L16.78 8.13L16.41 8.49L16.49 9C16.54 9.32 16.57 9.64 16.57 9.98C16.57 10.32 16.54 10.64 16.49 10.96L16.41 11.47L16.78 11.83L18.41 13.42L17.19 15.53L15.02 14.91L14.52 14.77L14.12 15.09C13.59 15.52 13.01 15.85 12.4 16.07L11.9 16.25L11.77 16.76L11.22 19H8.78L8.23 16.8L8.1 16.29L7.6 16.11C7 15.88 6.42 15.55 5.88 15.12L5.48 14.8L4.98 14.94L2.81 15.56L1.6 13.44L3.23 11.85L3.6 11.49L3.52 10.98C3.47 10.66 3.44 10.33 3.44 10C3.44 9.67 3.47 9.34 3.52 9.02L3.6 8.51L3.23 8.15L1.6 6.56L2.82 4.45L4.99 5.07L5.49 5.21L5.89 4.89C6.42 4.45 7 4.12 7.61 3.9L8.11 3.72L8.24 3.21L8.78 1H11.22ZM12 0H8L7.26 2.96C6.53 3.23 5.86 3.62 5.26 4.1L2.34 3.27L0.339996 6.73L2.53 8.86C2.47 9.23 2.44 9.61 2.44 10C2.44 10.39 2.47 10.77 2.53 11.14L0.339996 13.27L2.34 16.73L5.26 15.9C5.86 16.38 6.53 16.77 7.26 17.04L8 20H12L12.74 17.04C13.47 16.77 14.14 16.38 14.74 15.9L17.66 16.73L19.66 13.27L17.47 11.14C17.53 10.77 17.56 10.39 17.56 10C17.56 9.61 17.53 9.23 17.47 8.86L19.66 6.73L17.66 3.27L14.74 4.1C14.14 3.62 13.47 3.23 12.74 2.96L12 0Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Configuración</div>
+                </a>
+              </div>
+              <!-- History -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8.18 1L8.42 2.2L8.58 3H9.4H14V10H8.82L8.58 8.8L8.42 8H7.6H1V1H8.18ZM9 0H0V18H1V9H7.6L8 11H15V2H9.4L9 0Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Historial de denuncias</div>
+                </a>
+              </div>
+              <!-- Help -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.36 7.96C13.36 9.05 12.69 9.63 12.05 10.2C11.52 10.67 11.02 11.1 10.89 11.8L10.85 12H9.1L9.13 11.72C9.27 10.55 9.93 9.96 10.6 9.45C11.12 9.05 11.61 8.68 11.61 7.96C11.61 7.45 11.38 6.99 10.98 6.67C10.58 6.36 10.06 6.25 9.56 6.38C8.97 6.53 8.51 7.05 8.37 7.72L8.32 8H6.57L6.63 7.58C6.83 6.18 7.78 5.05 9.05 4.71C10.1 4.42 11.19 4.63 12.03 5.28C12.88 5.92 13.36 6.9 13.36 7.96ZM10 16C10.55 16 11 15.55 11 15C11 14.45 10.55 14 10 14C9.45 14 9 14.45 9 15C9 15.55 9.45 16 10 16ZM10 1C5.04 1 1 5.04 1 10C1 14.96 5.04 19 10 19C14.96 19 19 14.96 19 10C19 5.04 14.96 1 10 1ZM10 0C15.52 0 20 4.48 20 10C20 15.52 15.52 20 10 20C4.48 20 0 15.52 0 10C0 4.48 4.48 0 10 0Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Ayuda</div>
+                </a>
+              </div>
+              <!-- Send Commends -->
+              <div class="sidebar__tab">
+                <a href="javaScript:;" class="sidebar__tab__link">
+                  <!-- Icon -->
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9 12H7V10H9V12ZM9 3H7V9H9V3ZM15 1H1V17.59L4.29 14.3L4.59 14H5H15V1ZM16 0V15H5L0 20V0H16Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <!-- Name -->
+                  <div class="sidebar__tab__name">Enviar comentarios</div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Links -->
+          <section class="sidebar__section">
+            <div class="sidebar__section__body">
+              <div class="sidebar__section__links">
+                <a href="javaScript:;" class="sidebar_link">Acerca de</a>
+                <a href="javaScript:;" class="sidebar_link">Prensa</a>
+                <a href="javaScript:;" class="sidebar_link">Derechos de autor</a>
+                <a href="javaScript:;" class="sidebar_link">Cominicarte con nosotros</a>
+                <a href="javaScript:;" class="sidebar_link">Creadores</a>
+                <a href="javaScript:;" class="sidebar_link">Anunciar</a>
+                <a href="javaScript:;" class="sidebar_link">Desarrolladores</a>
+              </div>
+
+              <div class="sidebar__section__links">
+                <a href="javaScript:;" class="sidebar_link">Condiciones de privacidad</a>
+                <a href="javaScript:;" class="sidebar_link">Politicas y seguridad</a>
+                <a href="javaScript:;" class="sidebar_link">Cómo funciona Youtube</a>
+                <a href="javaScript:;" class="sidebar_link">Prueba funciones nuevas</a>
+              </div>
+            </div>
+          </section>
+
+          <footer class="sidebar__footer">© 2022 Google LLC</footer>
+        </aside>
+
+        <!-- Video Preview -->
+        <div class="videoPreview__container">
+          <div class="filter"></div>
+          <div class="card__container" id="items"></div>
         </div>
-        <span id="visite">1 M de vistas &middot; en 15 horas</span>
+        <!-- ./ end Video Preview -->
       </div>
-    </div>
-</div>
-</template>
-  <script src="./js/app.js"></script>
-</body>
+      <!-- ./end container -->
+    </main>
+    <template id="template__card">
+      <div class="card">
+        <header class="card__video">
+          <img src="" alt="" width="100%" />
+        </header>
+        <div class="card__body">
+          <div class="card__avatar">
+            <img src="" alt="" id="card__avatar__img" />
+          </div>
+          <div class="card__text">
+            <h3></h3>
+            <div class="card__name">
+              <span id="name">MichelleVar</span>
+              <img src="" alt="" id="card__vector__img" />
+            </div>
+            <span id="visite">1 M de vistas &middot; en 15 horas</span>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
