@@ -44,6 +44,187 @@
 /*----------------------------------------------------------------*/
 /*            NAVBAR CLASS                                        */
 /*----------------------------------------------------------------*/
+.header{
+  height: 56px;
+  background-color: #FFFFFF
+}  
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  position: fixed;
+  height: 56px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  background-color: #FFFFFF
+}
+
+.header__group{
+  display: flex;
+  align-items: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  gap: 24px;
+  
+}
+
+.group__brand{
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.brand__icon{
+  display: block;
+  height: 100%;
+  transform: scale(1.5,1.5);
+  margin-right: 5px;
+}
+
+.brand__letter{
+  display: block;
+  height: 100%;
+}
+
+.group__hamburger{
+  width: 24px;
+  height: 24px;
+}
+
+.hamburger__group{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__search{
+  display: flex;
+  width: 685px;
+  height: 40px;
+  left: 323.5px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 134px;
+}
+
+.search__input{
+  
+  width: 572px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-sizing: border-box;
+  box-shadow: inset 0px 1px 2px #EEEEEE;
+}
+
+.search__button{
+  display: flex;
+  width: 64px;
+  height: 40px;
+  background: #F0F0F0;
+  border: 1px solid #C6C6C6;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__voice{
+  width: 40px;
+  height: 40px;
+  background: #F9F9F9;
+  border-radius: 100%;
+  border: #F9F9F9;
+}
+
+.header__user{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  width: 242px;
+  height: 40px;
+  left: 1182px;
+  top: 8px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  margin: 0px 134px;
+}
+
+.user__apps{
+  width: 24px;
+  height: 24px;
+  top: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 16px;
+}
+
+.apps__button{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-color: #FFFFFF;
+  border: none;
+  align-items: center;
+}
+
+.user__options{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  margin: 0px 16px;
+  
+}
+
+.options__button{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.connection-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 11px;
+  height: 40px;
+  border: 1px solid #065FD4;
+  border-radius: 2px;
+  margin: 0px 10px;
+  color: #065FD4;
+  background-color: #FFFFFF;
+}
+
+.connection-btn__icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 11px;
+}
+
+.connection-btn__content{
+  font-weight: 500px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
 
 /*----------------------------------------------------------------*/
 /*            SIDEBAR CLASS                                       */
