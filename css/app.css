@@ -2,12 +2,14 @@
   font-family: "Roboto", sans-serif;
   --text-paragrap: #030303;
   --text-paragrap-2: #606060;
+  --text-link: #174ea6;
   --connect-btn: #065fd4;
   --logo-bg: #ff0000;
   --filter-bg-1: #0000001a;
   --filter-bg-2: #0f0e0e0d;
   --filter-bg-3: #333333;
   --header-height: 60px;
+
 }
 
 /*----------------------------------------------------------------*/
@@ -443,3 +445,55 @@
   margin-top: 5px;
   font-size: 14px;
 }
+
+.register__container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form{
+  border: 1px solid #cccccc ;
+  padding: 48px 40px ;
+}
+
+.form__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+  row-gap: 12px;
+  margin-bottom: 45px;
+}
+.form__input {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 6px 8px;
+  display: block;
+}
+
+.form__input--span{
+  grid-column: span 2;
+  }
+
+  .form__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__link{
+    text-decoration: none;
+    color: var(--text-link);
+  }
+
+  .form__button{
+    width: 30%;
+    padding: 6px 10px;
+    margin: 0px 10px;
+    border: 1px solid var(--text-link);
+    border-radius: 2px;
+    color: white;
+    background-color: var(--text-link);
+    text-decoration: none;
+  }
