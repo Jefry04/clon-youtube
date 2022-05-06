@@ -1,6 +1,6 @@
-const items = document.getElementById("items")
-const templateCard =document.getElementById("template__card").content
-const fragment= document.createDocumentFragment()
+const items = document.getElementById("items");
+const templateCard = document.getElementById("template__card").content;
+const fragment = document.createDocumentFragment();
 
 document.addEventListener("DOMContentLoaded", (e) => {
   fetchDataFilters();
@@ -37,7 +37,10 @@ const printButton = (filters) => {
 };
 
 const printVideoPreview = (videoData) => {
-  videoData.map((video) => {
+  for (let index = 0; index < 80; index++) {
+    const ramdomIndex = Math.floor(Math.random() * videoData.length);
+    const video = videoData[ramdomIndex];
+
     templateCard.querySelector("h3").textContent = video.title;
     templateCard.querySelector("#name").textContent = video.name;
     templateCard.querySelector("#visite").textContent = video.visitas;
@@ -46,7 +49,8 @@ const printVideoPreview = (videoData) => {
     templateCard.querySelector("#card__vector__img").setAttribute("src", video.checkSrc);
 
     const clone = templateCard.cloneNode(true);
-    fragment.appendChild(clone)
-  });
-  items.appendChild(fragment)
+    fragment.appendChild(clone);
+  }
+
+  items.appendChild(fragment);
 };
